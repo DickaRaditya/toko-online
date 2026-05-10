@@ -10,14 +10,28 @@ function getProducts() {
   return products;
 }
 
+<<<<<<< HEAD
+=======
+function formatRupiah(amount) {
+  return "Rp" + amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+>>>>>>> fix/product-price-format
 function renderProductList() {
   const container = document.getElementById("main-content");
   container.innerHTML = products.map(p =>
     `<div class="product-card">
        <h3>${p.name}</h3>
+<<<<<<< HEAD
        <p>Harga: Rp${p.price.toLocaleString()}</p>
+=======
+       <p>Harga: ${formatRupiah(p.price)}</p>
+>>>>>>> fix/product-price-format
        <p>Stok: ${p.stock}</p>
      </div>`
   ).join("");
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fix/product-price-format
